@@ -9,13 +9,21 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
-            background: url('https://0bsidian.s3.us-east-2.amazonaws.com/Videos/youtube_uK3-1GdfkIU_1920x1012_h264.mp4') no-repeat center center fixed;
-            background-size: cover;
             font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            position: relative;
+        }
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
         }
         .container {
             background: rgba(0, 0, 0, 0.5);
@@ -26,6 +34,7 @@
             width: fit-content;
             max-width: 90%;
             box-sizing: border-box;
+            z-index: 1;
         }
         .icons {
             display: flex;
@@ -54,6 +63,9 @@
     </style>
 </head>
 <body>
+    <video autoplay loop muted class="background-video">
+        <source src="https://0bsidian.s3.us-east-2.amazonaws.com/Videos/youtube_uK3-1GdfkIU_1920x1012_h264.mp4" type="video/mp4">
+    </video>
     <div class="container">
         <h1>Links</h1>
         <p>Refer to the icons below for the following links:</p>
@@ -70,8 +82,5 @@
             <li><a href="https://www.roblox.com">Roblox</a></li>
         </ul>
     </div>
-    <video autoplay loop muted class="background-video">
-        <source src="https://0bsidian.s3.us-east-2.amazonaws.com/Videos/youtube_uK3-1GdfkIU_1920x1012_h264.mp4" type="video/mp4">
-    </video>
 </body>
 </html>
